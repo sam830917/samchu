@@ -1,0 +1,13 @@
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.title-bg-color {
+  background-image: linear-gradient(to right, rgba(100,100,100,0), rgba(100,100,100,0.8), rgba(100,100,100,0));
+}
