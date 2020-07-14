@@ -95,34 +95,36 @@
             <!--<img src="../assets/img/portfolio-details-2.jpg" class="portfolio-details-img" alt="">-->
           </div>
 
-          <div class="portfolio-info">
-            <h3>About</h3>
-            <ul>
-              <li><strong>Team Name</strong>: Big Tooth Studios</li>
-              <li><strong>Engine</strong>: Unity</li>
-              <li><strong>Genre</strong>: Puzzle</li>
-              <li><strong>Platform</strong>: Android<li>
-              <li><strong>Date</strong>: December 2019</li>
-              <li><strong>Team Size</strong>: 4 (1 SD, 2 Level Design, 1 Art)</li>
-              <li><strong>Develop Time</strong>: 8 Weeks</li>
-              <li><a href="https://drive.google.com/file/d/1Tc-eIdqrqR7e1rVECc1qSDbIDUq7ZTj_/view?usp=sharing" class="simple-button" target="_blank">Download</a></li>
-            </ul>
-          </div>
-
         </div>
 
-        <div class="section-title" style="padding-top: 70px;">
-          <h2>Description</h2>
-          <p>
-		  In Light Up the Knight you play as the Fire Knight who has been ordered by the king of the realm to create fireworks for festivals. 
-		  Push fireworks boxes to create a chain reaction and reach the final, red, fireworks box. Maneuver the fireworks boxes around 
-		  non-destructible obstacles to set off fireworks boxes and destroy old crates.
-		  </p>
-          <p style="padding-top: 10px;">
-		  Once the boxes are in place, the Fire Knight swings the Fire Sword to ignite fireworks and start the chain reaction. Then, 
-		  the Knight sits back to watch the spectacle. The more boxes that are used, the better the results will be!
-		  </p>
-        </div>
+		<div class="row col-md-12">
+			<div class="section-title col-md-8" style="padding-top: 70px;">
+			<h2>Description</h2>
+			<p>
+			In Light Up the Knight you play as the Fire Knight who has been ordered by the king of the realm to create fireworks for festivals. 
+			Push fireworks boxes to create a chain reaction and reach the final, red, fireworks box. Maneuver the fireworks boxes around 
+			non-destructible obstacles to set off fireworks boxes and destroy old crates.
+			</p>
+			<p style="padding-top: 10px;">
+			Once the boxes are in place, the Fire Knight swings the Fire Sword to ignite fireworks and start the chain reaction. Then, 
+			the Knight sits back to watch the spectacle. The more boxes that are used, the better the results will be!
+			</p>
+			</div>
+	
+			<div class="portfolio-info col-md-4">
+			<h3>About</h3>
+			<ul>
+				<li><strong>Team Name</strong>: Big Tooth Studios</li>
+				<li><strong>Engine</strong>: Unity</li>
+				<li><strong>Genre</strong>: Puzzle</li>
+				<li><strong>Platform</strong>: Android<li>
+				<li><strong>Date</strong>: December 2019</li>
+				<li><strong>Team Size</strong>: 4 (1 SD, 2 Level Design, 1 Art)</li>
+				<li><strong>Develop Time</strong>: 8 Weeks</li>
+				<li><a href="https://drive.google.com/file/d/1Tc-eIdqrqR7e1rVECc1qSDbIDUq7ZTj_/view?usp=sharing" class="simple-button" target="_blank">Download</a></li>
+			</ul>
+			</div>
+		</div>
 		
         <div class="section-title">
           <h2>Trailer</h2>
@@ -154,19 +156,21 @@
 					<li>The player can be able to tap on any square that is accessible and be able to move to that square.</li>
 					<li>The fire Knight should move visibly to the new square while avoiding occupied squares.</li>
 				</ul>
+				<button style="float: right;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#AutoPathModal">Detail</button>
 			</div>
           </div>
 		  <hr>
 		  <div class="row">
 			<div class="col-md-6">
-				<h3>Combo System</h3>
+				<h3>Tutorial Controller</h3>
 				<ul style="font-size: large;">
-					<li>Fire Knight swings the Fire Sword to ignite fireworks and start the chain reaction.</li>
-					<li>The chain reaction will continue to happen until all firework rockets are hit obstacles.</li>
+					<li>In tutorial level, player can only follow the instructions.</li>
+					<li>Level designers can modify every step on panel which means they don't need to touch any code.</li>
 				</ul>
+				<button style="float: left;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#TutorialControllerModal">Detail</button>
 			</div>
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/combo-system.gif" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/TutorialController.PNG" class="portfolio-detail-content-image">
 			</div>
           </div>
 		  <hr>
@@ -186,18 +190,39 @@
 		  <hr>
 		  <div class="row">
 			<div class="col-md-6">
-				<h3>Sound Manager</h3>
+				<h3>Combo System</h3>
 				<ul style="font-size: large;">
-					<li>Undestroy object - sound manager that prevent every audio sources preload multiple times on scene transition.</li>
-					<li>Clear settings panel that level designer easy to add new audio and manage audio sources.</li>
-					<li>Managed audio sources in one script. When I want a specific audio to play, just simply call one function.</li>
+					<li>Fire Knight swings the Fire Sword to ignite fireworks and start the chain reaction.</li>
+					<li>The chain reaction will continue to happen until all firework rockets are hit obstacles.</li>
 				</ul>
 			</div>
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/sound-manager.gif" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/combo-system.gif" class="portfolio-detail-content-image">
 			</div>
           </div>
 		  
+        </div>
+		
+        <div class="section-title">
+          <h2>Retrospective</h2>
+		  <h3>What I learned</h3>
+		  <ul style="font-size: large;">
+		  	<li>Experiment new thing on project is not always a bad thing. I can learn a lot on failures.</li>
+		  	<li>It’s important to keep in mind who you are making the game for, target audience, Beta play testing was helpful.</li>
+		  	<li>More research on version control aspect of perforce.</li>
+		  </ul>
+		  <h3>What Went Wrong</h3>
+		  <ul style="font-size: large;">
+		  	<li>If one package working did not satisfy me, I may look for other package rather than keep it and resetting multiple times.</li>
+		  	<li>Pixel perfect camera was not pixel perfect due to I didn’t notice the image dimension.</li>
+		  	<li>Underestimated the amount of work epics had. Some epics only have one or two task for that.</li>
+		  </ul>
+		  <h3>What Went Well</h3>
+		  <ul style="font-size: large;">
+		  	<li>Tried new scripts and packages that I’ve never used before, and result goes not bad.</li>
+		  	<li>Autopath for the player that I implemented is satisfactory.</li>
+		  	<li>No major bugs in our game.</li>
+		  </ul>
         </div>
 		
       </div>
@@ -220,6 +245,139 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
+
+  <!-- prettyprint -->
+  <link href="../assets/css/prettyprint.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
+  <!-- Modal -->
+  <div class="modal fade" id="AutoPathModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Auto Path</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		
+		<div class="col-md-12 modal-detail-container">
+		<p>
+		I was using A* algorithm to find a path for the player. Because in the Light Up The Knight, map is tile-base. 
+		Character is moving tile to tile, and the shortest path is not necessary. Therefore, A* algorithm is best for this game.
+		</p>
+		
+<pre class="prettyprint linenums language-csharp">
+public static List&lt;Vector2Int&gt; FindPath( GameObject[,] tilesArray, Vector2Int targetPosition, Vector2Int playerPosition )
+    {
+        Vector2Int mapSize = new Vector2Int(tilesArray.GetLength(0), tilesArray.GetLength(1));
+        int[,] map = GetMap(tilesArray);
+        var graph = new Graph(map);
+        var search = new Search(graph);
+
+        int playerIndex = TransformPositionToIndex(playerPosition, mapSize);
+        int targetIndex = TransformPositionToIndex(targetPosition, mapSize);
+        search.Start(graph.nodes[playerIndex], graph.nodes[targetIndex]);
+
+        while (!search.finished)
+        {
+            search.Step();
+        }
+
+        List&lt;Vector2Int&gt; path = new List&lt;Vector2Int&gt;();
+        //print("Search done. Path length " + search.path.Count + " iterations " + search.iterations);
+        for (int i = 1;i < search.path.Count;i++)
+        {
+            var label = Int32.Parse(search.path[i].label);
+            path.Add(TransformIndexToPosition(label, mapSize));
+        }
+        return path;
+    }
+</pre>
+
+		<p>
+		This function return a list that contains every direction that player should go to.
+		</p>
+		
+		</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="TutorialControllerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Tutorial Controller</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		
+		<div class="col-md-12 modal-detail-container">
+		<p>
+		Due to in Light Up The Knight, we have 4 tutorial levels. I cannot just hard core every instruction for every level.
+		So, I made a Tutorial Controller for level designers. I want it highly flexible and easily modify.
+		</p>
+<pre class="prettyprint linenums language-csharp">
+[System.Serializable]
+    public class Steps
+    {
+        public string stepName;
+        public Step step;
+        [Header("MOVE PLAYER")]
+        public Vector2Int playerGoTo;
+        [Header("MOVE BOX")]
+        public Vector2Int boxFrom;
+        public Vector2Int boxTo;
+        [Header("TAP BOX")]
+        public Vector2Int boxIndex;
+    }
+	
+	public enum Step
+    {
+        MOVE_PLAYER,
+        PRESS_IGNITE_BUTTON,
+        MOVE_BOX,
+        JUST_TAP_BOX
+    };
+</pre>
+		<p>
+		In Steps Array, size is how many step you should follow. 
+		And Step has 4 instruction enum.
+		<ul>
+		  <li>Move Player</li>
+		  <li>Press Ignite Button</li>
+		  <li>Move Specific Box</li>
+		  <li>Tap Specific Box</li>
+		</ul>
+		Step Name just give a name for every step.
+		For using this controller, the most important part is to select one step instruction, 
+		if level designers choose MOVE_PLAYER, and they should also set player target coords below.
+		</p>
+		<img src="../assets/images/LightUpTheKnight/TutorialController.PNG" class="portfolio-detail-content-image">
+		<p>
+		When the level starts, Tutorial Controller will lock up the movement of knight, ignite button and interaction with box.
+		And white glove will pop up to indicate the player to tap sepecific area. This controller make sure player can finish 
+		tutorial level without breaking level and misunderstanding the mechanics.
+		</p>
+		<img src="../assets/images/LightUpTheKnight/TutorialController2.PNG" class="portfolio-detail-content-image">
+		
+		</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
