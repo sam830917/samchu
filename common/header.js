@@ -3,6 +3,7 @@ header = '<header id="header">\
   <div class="profile">\
 	<img src="assets/images/profile-img.png" alt="" class="img-fluid rounded-circle">\
 	<h1 class="text-light"><a href="index.html">Chien-Yu Chu</a></h1>\
+	<h2 class="text-light"><a href="index.html">Gameplay Programmer</a></h1>\
 	<div class="social-links mt-3 text-center">\
 	  <a href="mailto:sam830917@gmail.com" class="google-plus"><i class="bx bx-envelope"></i></a>\
 	  <a href="https://www.linkedin.com/in/%E5%BB%BA%E5%AE%87-%E6%9C%B1-732147191/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>\
