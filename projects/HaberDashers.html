@@ -131,9 +131,9 @@
         <div class="section-title">
           <h2>Personal Responsibility</h2>
 		  <ul style="font-size: large;">
-		  	<li>Handled kart physics</li>
-		  	<li>Designed useful functions and dispatchers for other team</li>
-		  	<li>Controlled Character animation state</li>
+		  	<li>Handled kart physics  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#KartPhysicsModal">Detail</button></li>
+		  	<li>Designed useful functions and dispatchers for other team  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#KartFunctionsModal">Detail</button></li>
+		  	<li>Controlled character animation state  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#AnimationModal">Detail</button></li>
 		  </ul>
         </div>
 		
@@ -200,6 +200,119 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
+
+  <!-- prettyprint -->
+  <link href="../assets/css/prettyprint.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?"></script>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="KartPhysicsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Kart Physics</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		
+		<div class="col-md-12 modal-detail-container">
+		<p>
+		In our kart, we want to fully control kart movement. Therefore, in kart team, we decided to script kart movement from scratch.
+		Acceleration, turn acceleration, max speed, thrust, damping, etc. In this section, I would like to talk about air gravity in our kart.
+		</p>
+		<p>
+		In Unreal, if you use blueprint, you cannot dynamic change gravity value. We spent a lot of times on adjust gravity value, but it still 
+		did not feel good. So, I wrote a script to semi-control gravity in the air. It means still using Unreal's physics gravity, but I add or 
+		subtract velocity in the kart.
+		</p>
+		<p>
+		In my logic, gravity is not always gives fixed number to object. Unreal's physics gravity still gives velocity into object, but I give 
+		opposite velocity to neutralize. I can just adjust my opposite velocity then I can easily change air gravity.
+		</p>
+		<img src="../assets/images/HaberDashers/air-gravity.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		
+		<p style="padding-top: 30px;">
+		I have a variable it is for reducing opposite velocity percentage per frame. Level design can twist the value to that it feel good.
+		</p>
+		<img src="../assets/images/HaberDashers/air-gravity1.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<p style="text-align: center;">Reducing opposite velocity equals 0 (ZERO gravity, always pushing you up in equal velocity)</p>
+		<img src="../assets/images/HaberDashers/air-gravity2.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<p style="text-align: center;">Reducing opposite velocity equals 1 (No any opposite velocity)</p>
+		<img src="../assets/images/HaberDashers/air-gravity3.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<p style="text-align: center;">Reducing opposite velocity equals 0.17</p>
+		<p style="padding-top: 30px;">
+		By using this script, level design can control the air floating feel to fit in our game.
+		</p>
+		</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="KartFunctionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Kart Functions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		
+		<div class="col-md-12 modal-detail-container">
+		<p>
+		A log of teams need to get or set value into kart. Therefore, in kart team, we need to provide functions and events that can be called 
+		outside the kart.
+		</p>
+		<img src="../assets/images/HaberDashers/kart-functions.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="AnimationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Animation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		
+		<div class="col-md-12 modal-detail-container">
+		<p>
+		Character animation is a important part for kart team. In our logic, there has several states for character.
+		<ul>
+		  <li>Normal - character do nothing.</li>
+		  <li>Emote - winning pose.</li>
+		  <li>Turn Left - character turns wheel from middle to left animation.</li>
+		  <li>Left - character stay in left animation.</li>
+		  <li>Turn Right - character turns wheel from middle to right animation.</li>
+		  <li>Right - character stay in right animation.</li>
+		</ul>
+		</p>
+		<img src="../assets/images/HaberDashers/animation.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
