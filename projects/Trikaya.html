@@ -132,9 +132,9 @@
         <div class="section-title">
           <h2>Personal Responsibility</h2>
 		  <ul style="font-size: large;">
-		  	<li>Implemented interactable object base class  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#InteractableObject">Detail</button></li>
-		  	<li>  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#KartFunctionsModal">Detail</button></li>
-		  	<li>  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#AnimationModal">Detail</button></li>
+		  	<li>Implemented interactable object base classes and most of interactable object  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#InteractableObject">Detail</button></li>
+		  	<li>Developed checkpoint and saving system  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#CheckpointSystem">Detail</button></li>
+		  	<li>Built up localization for the game(English, Simplified Chinese, Traditional Chinese and Japanese) </li>
 		  </ul>
         </div>
 		
@@ -142,15 +142,27 @@
           <h2>Retrospective</h2>
 		  <h3>What I learned</h3>
 		  <ul style="font-size: large;">
-		  	<li></li>
+		  	<li>
+			Change doesn't mean the end of the world. In some situations, changing early will be the best solution.
+			</li>
 		  </ul>
 		  <h3>What Went Wrong</h3>
 		  <ul style="font-size: large;">
-		  	<li></li>
+		  	<li>
+			Because of Covid-19, we started at the online rather than face to face. This caused the communication very expensive and also 
+			resulted to a low morale through months.
+			</li>
+		  	<li>
+			At the beginning of the game, we struggled the convey to the player. Therefore, we changed a lot from the art style to the game mechanic. 
+			This caused some old codes became a mess.
+			</li>
 		  </ul>
 		  <h3>What Went Well</h3>
 		  <ul style="font-size: large;">
-		  	<li></li>
+		  	<li>
+			Solid interactable object base class. This helped me a lot, due to the start of this game, our game change frequently. 
+			But no matter how big change is, we always kept a way for modification.
+			</li>
 		  </ul>
         </div>
 		
@@ -194,10 +206,20 @@
 		<div class="col-md-12 modal-detail-container">
 			<p>
 			In our game, the interaction between object and spell is the game pillar. In order to maintain current objects and add new objects. 
-			We kept it highly flexibility and all the object inherits the base class.
+			We kept it highly flexible and all the object inherits the base class.
 			</p>
 			
 			<img src="../assets/images/Trikaya/InteractableObject.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			
+			<p style="padding-top: 30px;">
+			On the base classes, we used the virtual function for the general use function. In this case, a child class can easily override base function 
+			and write specific behavior.
+			</p>
+			<p>
+			For example, ore cube can interact with wind spell and fire spell. Therefore, ore cube should override InteractWithFire and InteractWithWind 
+			functions.
+			</p>
+			<img src="../assets/images/Trikaya/InteractableObject2.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 		</div>
 		
         </div>
@@ -207,11 +229,11 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="KartFunctionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal fade" id="CheckpointSystem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 1000px;" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" id="exampleModalLongTitle">Kart Functions</h5>
+          <h2 class="modal-title" id="exampleModalLongTitle">Checkpoint System</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -219,31 +241,24 @@
         <div class="modal-body">
 		
 		<div class="col-md-12 modal-detail-container">
-		
-		
-		</div>
-		
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="AnimationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" style="max-width: 1000px;" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="exampleModalLongTitle">Animation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-		
-		<div class="col-md-12 modal-detail-container">
-		
-		
+			<p>
+			In order to save current player state, I made a check point system which can save player location, rotation and gems.
+			</p>
+			<p>
+			The checkpoint system contains an array of trigger notes. A trigger note includes a cube area(can be scale) when the player 
+			overlap with it, it can save current state. 
+			Every trigger note will draw in the map(only on editor mode), it is useful for the level designer to know the saving location.
+			</p>
+			<img src="../assets/images/Trikaya/CheckPointSystem.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			<p style="padding-top: 30px;">
+			Also, every trigger note includes an index. This index is for activating or deactivating another trigger node. That is to say when a 
+			trigger node got overlapped, it will deactivate the nodes that have a smaller index. This mechanism prevents when player skips the 
+			trigger nodes, and go back to the previous route which is in the wrong direction, the player will not trigger a checkpoint.
+			</p>
+			<p>
+			For instance, there has 5 trigger nodes, when player triggers 1 node, and go to 3 node, it will deactivate two 2 nodes.
+			</p>
+			<img src="../assets/images/Trikaya/CheckPointSystem2.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 		</div>
 		
         </div>
