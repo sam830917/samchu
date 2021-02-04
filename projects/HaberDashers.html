@@ -40,6 +40,10 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <!--Magnific-Popup-master-->
+  <link href="../assets/vendor/Magnific-Popup-master/magnific-popup.css" rel="stylesheet">
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.js"></script>
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -58,6 +62,12 @@
   <script>
     $(document).ready(function() {
       $('#projectLink').addClass('active');
+	  
+	  $('.popup-img').each(function() {
+         var link = $(this).attr('src');
+		 $(this).wrap( "<a class='popup-img-link' href='" + link + "'></a>" );
+	  });
+	  $('.popup-img-link').magnificPopup({type:'image'});;
     });
   </script>
   <!-- End Header -->
@@ -87,13 +97,13 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/images/HaberDashers/title.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot1.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot2.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot3.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot4.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot5.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/HaberDashers/screenshot6.jpg" class="portfolio-details-img" alt="">
+            <img src="../assets/images/HaberDashers/title.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot1.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot2.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot3.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot4.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot5.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/HaberDashers/screenshot6.jpg" class="portfolio-details-img popup-img" alt="">
           </div>
 
         </div>
@@ -231,16 +241,16 @@
 		In my logic, gravity is not always gives fixed number to object. Unreal's physics gravity still gives velocity into object, but I give 
 		opposite velocity to neutralize. I can just adjust my opposite velocity then I can easily change air gravity.
 		</p>
-		<img src="../assets/images/HaberDashers/air-gravity.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/air-gravity.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		
 		<p style="padding-top: 30px;">
 		I have a variable it is for reducing opposite velocity percentage per frame. Level design can twist the value to that it feel good.
 		</p>
-		<img src="../assets/images/HaberDashers/air-gravity1.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/air-gravity1.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">Reducing opposite velocity equals 0 (ZERO gravity, always pushing you up in equal velocity)</p>
-		<img src="../assets/images/HaberDashers/air-gravity2.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/air-gravity2.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">Reducing opposite velocity equals 1 (No any opposite velocity)</p>
-		<img src="../assets/images/HaberDashers/air-gravity3.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/air-gravity3.gif" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">Reducing opposite velocity equals 0.17</p>
 		<p style="padding-top: 30px;">
 		By using this script, level design can control the air floating feel to fit in our game.
@@ -270,7 +280,7 @@
 		A lot of teams need to get or set value into kart. Therefore, in kart team, we need to provide functions and events that can be called 
 		outside the kart.
 		</p>
-		<img src="../assets/images/HaberDashers/kart-functions.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/kart-functions.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		</div>
 		
         </div>
@@ -303,7 +313,7 @@
 		  <li>Right - character stay in right animation.</li>
 		</ul>
 		</p>
-		<img src="../assets/images/HaberDashers/animation.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+		<img src="../assets/images/HaberDashers/animation.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image popup-img">
 		</div>
 		
         </div>

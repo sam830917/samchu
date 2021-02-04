@@ -120,7 +120,7 @@ hr {
   bottom: 0;
   width: 300px;
   transition: all ease-in-out 0.5s;
-  z-index: 9997;
+  z-index: 900;
   transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
@@ -242,7 +242,7 @@ hr {
   position: fixed;
   right: 15px;
   top: 15px;
-  z-index: 9998;
+  z-index: 901;
   border: 0;
   background: none;
   font-size: 24px;
@@ -1152,7 +1152,7 @@ section {
   left: 0;
   bottom: 0;
   width: 300px;
-  z-index: 9999;
+  z-index: 901;
   background: #040b14;
 }
 

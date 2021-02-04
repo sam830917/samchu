@@ -40,6 +40,10 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <!--Magnific-Popup-master-->
+  <link href="../assets/vendor/Magnific-Popup-master/magnific-popup.css" rel="stylesheet">
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.js"></script>
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -58,6 +62,12 @@
   <script>
     $(document).ready(function() {
       $('#projectLink').addClass('active');
+	  
+	  $('.popup-img').each(function() {
+         var link = $(this).attr('src');
+		 $(this).wrap( "<a class='popup-img-link' href='" + link + "'></a>" );
+	  });
+	  $('.popup-img-link').magnificPopup({type:'image'});
     });
   </script>
   <!-- End Header -->
@@ -87,11 +97,11 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/images/LightUpTheKnight/poster.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/LightUpTheKnight/bts-logo-color-v0-8.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/LightUpTheKnight/key_art_1.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/LightUpTheKnight/Level1.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/LightUpTheKnight/Tutorial2.png" class="portfolio-details-img" alt="">
+            <img src="../assets/images/LightUpTheKnight/poster.jpg" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/LightUpTheKnight/bts-logo-color-v0-8.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/LightUpTheKnight/key_art_1.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/LightUpTheKnight/Level1.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/LightUpTheKnight/Tutorial2.png" class="portfolio-details-img popup-img" alt="">
             <!--<img src="../assets/img/portfolio-details-2.jpg" class="portfolio-details-img" alt="">-->
           </div>
 
@@ -148,7 +158,7 @@
 		  
 		  <div class="row">
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/auto-path.gif" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/auto-path.gif" class="portfolio-detail-content-image popup-img">
 			</div>
 			<div class="col-md-6">
 				<h3>Auto Path</h3>
@@ -170,13 +180,13 @@
 				<button style="float: left;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#TutorialControllerModal">Detail</button>
 			</div>
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/TutorialController.PNG" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/TutorialController.PNG" class="portfolio-detail-content-image popup-img">
 			</div>
           </div>
 		  <hr>
 		  <div class="row">
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/torch-system.gif" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/torch-system.gif" class="portfolio-detail-content-image popup-img">
 			</div>
 			<div class="col-md-6">
 				<h3>Torch System</h3>
@@ -197,7 +207,7 @@
 				</ul>
 			</div>
 			<div class="col-md-6">
-				<img src="../assets/images/LightUpTheKnight/combo-system.gif" class="portfolio-detail-content-image">
+				<img src="../assets/images/LightUpTheKnight/combo-system.gif" class="portfolio-detail-content-image popup-img">
 			</div>
           </div>
 		  

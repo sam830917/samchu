@@ -40,6 +40,10 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <!--Magnific-Popup-master-->
+  <link href="../assets/vendor/Magnific-Popup-master/magnific-popup.css" rel="stylesheet">
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.js"></script>
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -58,6 +62,12 @@
   <script>
     $(document).ready(function() {
       $('#projectLink').addClass('active');
+	  
+	  $('.popup-img').each(function() {
+         var link = $(this).attr('src');
+		 $(this).wrap( "<a class='popup-img-link' href='" + link + "'></a>" );
+	  });
+	  $('.popup-img-link').magnificPopup({type:'image'});
     });
   </script>
   <!-- End Header -->
@@ -87,11 +97,11 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/images/StarShip/screenshot1.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/StarShip/screenshot2.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/StarShip/screenshot3.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/StarShip/screenshot4.png" class="portfolio-details-img" alt="">
-            <img src="../assets/images/StarShip/screenshot5.png" class="portfolio-details-img" alt="">
+            <img src="../assets/images/StarShip/screenshot1.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/StarShip/screenshot2.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/StarShip/screenshot3.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/StarShip/screenshot4.png" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/StarShip/screenshot5.png" class="portfolio-details-img popup-img" alt="">
           </div>
 
         </div>

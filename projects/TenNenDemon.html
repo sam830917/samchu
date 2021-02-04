@@ -39,6 +39,11 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+  
+  <!--Magnific-Popup-master-->
+  <link href="../assets/vendor/Magnific-Popup-master/magnific-popup.css" rel="stylesheet">
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.js"></script>
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
 
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
@@ -58,6 +63,12 @@
   <script>
     $(document).ready(function() {
       $('#projectLink').addClass('active');
+	  
+	  $('.popup-img').each(function() {
+         var link = $(this).attr('src');
+		 $(this).wrap( "<a class='popup-img-link' href='" + link + "'></a>" );
+	  });
+	  $('.popup-img-link').magnificPopup({type:'image'});;
     });
   </script>
   <!-- End Header -->
@@ -87,10 +98,10 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/images/TenNenDemon/screenshot1.PNG" class="portfolio-details-img" alt="">
-            <img src="../assets/images/TenNenDemon/screenshot2.PNG" class="portfolio-details-img" alt="">
-            <img src="../assets/images/TenNenDemon/screenshot3.PNG" class="portfolio-details-img" alt="">
-            <img src="../assets/images/TenNenDemon/screenshot4.PNG" class="portfolio-details-img" alt="">
+            <img src="../assets/images/TenNenDemon/screenshot1.PNG" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/TenNenDemon/screenshot2.PNG" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/TenNenDemon/screenshot3.PNG" class="portfolio-details-img popup-img" alt="">
+            <img src="../assets/images/TenNenDemon/screenshot4.PNG" class="portfolio-details-img popup-img" alt="">
             <!--<img src="../assets/img/portfolio-details-2.jpg" class="portfolio-details-img" alt="">-->
           </div>
 
@@ -132,7 +143,7 @@
 		  
 		  <div class="row">
 			<div class="col-md-6">
-				<img src="../assets/images/TenNenDemon/cutscene.gif" style="max-width:100%;" class="portfolio-detail-content-image">
+				<img src="../assets/images/TenNenDemon/cutscene.gif" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 			</div>
 			<div class="col-md-6">
 				<h3>Cutscene</h3>
@@ -154,13 +165,13 @@
 				<button style="float: left;" type="button" class="btn btn-dark" data-toggle="modal" data-target="#ParticleSystemModal">Detail</button>
 			</div>
 			<div class="col-md-6">
-				<img src="../assets/images/TenNenDemon/ParticleSystem.gif" style="max-width:100%;" class="portfolio-detail-content-image">
+				<img src="../assets/images/TenNenDemon/ParticleSystem.gif" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 			</div>
           </div>
 		  <hr>
 		  <div class="row">
 			<div class="col-md-6">
-				<img src="../assets/images/TenNenDemon/character.png" style="height:300px;" class="portfolio-detail-content-image">
+				<img src="../assets/images/TenNenDemon/character.png" style="height:300px;" class="portfolio-detail-content-image popup-img">
 			</div>
 			<div class="col-md-6">
 				<h3>Characters</h3>
@@ -363,25 +374,25 @@ private:
 		<p>
 		Although my most of materials take from Helltaker, but I want to design my own character. So, I drew a sketch and took it into Photoshop for coloring.
 		</p>
-		<img src="../assets/images/TenNenDemon/concept1.jpg" style="max-width:100%;" class="portfolio-detail-content-image">
+		<img src="../assets/images/TenNenDemon/concept1.jpg" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">
 		Main character concept art
 		</p>
-		<img src="../assets/images/TenNenDemon/sketch1.jpg" style="max-width:100%;" class="portfolio-detail-content-image">
+		<img src="../assets/images/TenNenDemon/sketch1.jpg" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">
 		Main character sketch
 		</p>
 		<p>
 		I changed head and body scale that because it is easier to draw.
 		</p>
-		<img src="../assets/images/TenNenDemon/character1.gif" style="max-width:100%;" class="portfolio-detail-content-image">
+		<img src="../assets/images/TenNenDemon/character1.gif" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">
 		Character layers in Photoshop
 		</p>
 		<p>
 		After I finished a character image, I just made a character template. And only change face for every cutscene image.
 		</p>
-		<img src="../assets/images/TenNenDemon/character2.png" style="max-width:100%;" class="portfolio-detail-content-image">
+		<img src="../assets/images/TenNenDemon/character2.png" style="max-width:100%;" class="portfolio-detail-content-image popup-img">
 		<p style="text-align: center;">
 		No face main character template
 		</p>

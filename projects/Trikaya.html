@@ -39,6 +39,11 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+  
+  <!--Magnific-Popup-master-->
+  <link href="../assets/vendor/Magnific-Popup-master/magnific-popup.css" rel="stylesheet">
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.js"></script>
+  <script src="../assets/vendor/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
 
   <!-- =======================================================
   * Template Name: iPortfolio - v1.3.0
@@ -58,6 +63,12 @@
   <script>
     $(document).ready(function() {
       $('#projectLink').addClass('active');
+	  
+	  $('.popup-img').each(function() {
+         var link = $(this).attr('src');
+		 $(this).wrap( "<a class='popup-img-link' href='" + link + "'></a>" );
+	  });
+	  $('.popup-img-link').magnificPopup({type:'image'});;
     });
   </script>
   <!-- End Header -->
@@ -87,10 +98,10 @@
         <div class="portfolio-details-container">
 
           <div class="owl-carousel portfolio-details-carousel">
-            <img src="../assets/images/Trikaya/screenshot1.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/Trikaya/screenshot2.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/Trikaya/screenshot3.jpg" class="portfolio-details-img" alt="">
-            <img src="../assets/images/Trikaya/screenshot4.jpg" class="portfolio-details-img" alt="">
+			<img src="../assets/images/Trikaya/screenshot1.jpg" class="portfolio-details-img popup-img" alt="">
+			<img src="../assets/images/Trikaya/screenshot2.jpg" class="portfolio-details-img popup-img" alt="">
+			<img src="../assets/images/Trikaya/screenshot3.jpg" class="portfolio-details-img popup-img" alt="">
+			<img src="../assets/images/Trikaya/screenshot4.jpg" class="portfolio-details-img popup-img" alt="">
           </div>
 
         </div>
@@ -209,7 +220,7 @@
 			We kept it highly flexible and all the object inherits the base class.
 			</p>
 			
-			<img src="../assets/images/Trikaya/InteractableObject.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			<img class="popup-img" src="../assets/images/Trikaya/InteractableObject.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 			
 			<p style="padding-top: 30px;">
 			On the base classes, we used the virtual function for the general use function. In this case, a child class can easily override base function 
@@ -219,7 +230,7 @@
 			For example, ore cube can interact with wind spell and fire spell. Therefore, ore cube should override InteractWithFire and InteractWithWind 
 			functions.
 			</p>
-			<img src="../assets/images/Trikaya/InteractableObject2.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			<img class="popup-img" src="../assets/images/Trikaya/InteractableObject2.png" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 		</div>
 		
         </div>
@@ -249,7 +260,7 @@
 			overlap with it, it can save current state. 
 			Every trigger note will draw in the map(only on editor mode), it is useful for the level designer to know the saving location.
 			</p>
-			<img src="../assets/images/Trikaya/CheckPointSystem.PNG" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			<img class="popup-img" src="../assets/images/Trikaya/CheckPointSystem.PNG" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 			<p style="padding-top: 30px;">
 			Also, every trigger note includes an index. This index is for activating or deactivating another trigger node. That is to say when a 
 			trigger node got overlapped, it will deactivate the nodes that have a smaller index. This mechanism prevents when player skips the 
@@ -258,7 +269,7 @@
 			<p>
 			For instance, there has five trigger nodes, when player triggers 1 node, and go to 3 node, it will deactivate two 2 nodes.
 			</p>
-			<img src="../assets/images/Trikaya/CheckPointSystem2.PNG" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
+			<img class="popup-img" src="../assets/images/Trikaya/CheckPointSystem2.PNG" style="max-width:100%;padding-top: 30px;" class="portfolio-detail-content-image">
 		</div>
 		
         </div>
